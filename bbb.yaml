@@ -1,1791 +1,31 @@
 ---
-port: 7890
-socks-port: 7891
+mixed-port: 7893
+bind-address: "*"
 allow-lan: true
 mode: rule
 log-level: info
 external-controller: 0.0.0.0:9090
-proxies:
-- name: "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  server: krsaa.shanshan.uk
-  port: 50005
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀HK-香港-[日本转][移优]-1x"
-  server: jpyao.shanshan.uk
-  port: 12346
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀HK-香港-[韩国转]-1x"
-  server: krsaa.shanshan.uk
-  port: 12346
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀HK-香港M-[移优]-2x"
-  server: mbgp.shanshan.uk
-  port: 50443
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀HK-香港M-[联优]-2x"
-  server: cumpgp.shanshan.uk
-  port: 50443
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀HK-香港S-[移优]-1x"
-  server: pqsbgp.shanshan.uk
-  port: 60443
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: tesla.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀HK-香港S-[联优]-1x"
-  server: cu.shanshan.uk
-  port: 60443
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: tesla.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀JP-日本1-[流媒体][移优]-1x"
-  server: 141.11.130.44
-  port: 50005
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀JP-日本1-[流媒体][美西转]-1x"
-  server: uszz.shanshan.uk
-  port: 50468
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀JP-日本1-[流媒体][韩国转]-1x"
-  server: krsaa.shanshan.uk
-  port: 50005
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀JP-日本2-[日本转][移优]-1x"
-  server: jpyao.shanshan.uk
-  port: 50023
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀JP-日本2-[直连][移联优]-1x"
-  server: 191.223.221.21
-  port: 4443
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀JP-日本2-[美西转]-1x"
-  server: twzz2.shanshan.uk
-  port: 50462
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀JP-日本2-[韩国转]-1x"
-  server: krsaa.shanshan.uk
-  port: 50005
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀JP-日本3-[直连][三网优]-1x"
-  server: jpyao.shanshan.uk
-  port: 8443
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.au.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀SG-新加坡-[移优]-1x"
-  server: cmcc2.shanshan.uk
-  port: 50463
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀SG-新加坡-[联优]-1x"
-  server: cu.shanshan.uk
-  port: 50463
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀SG-新加坡-[韩国转]-1x"
-  server: krsaa.shanshan.uk
-  port: 50021
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀TW-台湾-[家宽][HY2]-1x"
-  server: twhy2.shanshan.uk
-  port: 443
-  type: hysteria2
-  password: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  auth: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  sni: cu.aaaa.gay
-  up: 300 Mbps
-  down: 300 Mbps
-  skip-cert-verify: false
-  alpn:
-  - h3
-  obfs: salamander
-  obfs-password: ILoveDounai
-- name: "☀TW-台湾-[家宽][日本转]-1x"
-  server: jpyao.shanshan.uk
-  port: 10086
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀TW-台湾-[家宽][直连]-1x"
-  server: twb.shanshan.uk
-  port: 50099
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀TW-台湾-[家宽][韩国转]-1x"
-  server: skb25.shanshan.uk
-  port: 10086
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀TW-台湾-[家宽][香港转]-1x"
-  server: cmcc2.shanshan.uk
-  port: 50007
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀TW-台湾PRO-[韩国转]-1x"
-  server: krsaa.shanshan.uk
-  port: 50005
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  server: cmin2v6.shanshan.uk
-  port: 50028
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: tesla.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀US-美国LA-[小水管][即将下架]-5x"
-  server: 38.58.57.6
-  port: 443
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀US-美国LA-[小水管][固定ip]-5x"
-  server: x5us.shanshan.uk
-  port: 60443
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀US-美国LA-[顶级][三网优]-3x"
-  server: mamius.shanshan.uk
-  port: 443
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  server: cmirandom.shanshan.uk
-  port: 50028
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: tesla.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀US-美国LA1-[CMI][三网优]-1x"
-  server: perlax2.shanshan.uk
-  port: 8443
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  server: cmirandom2.shanshan.uk
-  port: 50028
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀US-美国LA2-[CMI][三网优]-1x"
-  server: uscm.shanshan.uk
-  port: 50016
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: www.amd.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀US-美国PHX-[常规]-1x"
-  server: 107.172.98.243
-  port: 8085
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: tesla.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-- name: "☀US-美国PHX-[美西转]-1x"
-  server: idcf2.shanshan.uk
-  port: 50003
-  type: vless
-  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: false
-  reality-opts:
-    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
-  servername: tesla.com
-  client-fingerprint: random
-  network: tcp
-  udp: true
-proxy-groups:
-- name: "\U0001F680 手动选择"
-  type: select
-  proxies:
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "♻️ 自动选择"
-  type: url-test
-  url: https://cp.cloudflare.com/generate_204
-  interval: 300
-  tolerance: 50
-  proxies:
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F4AC 即时通讯"
-  type: select
-  proxies:
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "\U0001F3AF 全球直连"
-- name: "\U0001F310 社交媒体"
-  type: select
-  proxies:
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "\U0001F3AF 全球直连"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F680 GitHub"
-  type: select
-  proxies:
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "\U0001F3AF 全球直连"
-- name: "\U0001F916 ChatGPT"
-  type: select
-  proxies:
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F916 AI服务"
-  type: select
-  proxies:
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F3B6 TikTok"
-  type: select
-  proxies:
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F4F9 YouTube"
-  type: select
-  proxies:
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F3A5 Netflix"
-  type: select
-  proxies:
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F3A5 DisneyPlus"
-  type: select
-  proxies:
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F3A5 HBO"
-  type: select
-  proxies:
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F3A5 PrimeVideo"
-  type: select
-  proxies:
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F3A5 AppleTV+"
-  type: select
-  proxies:
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "\U0001F3AF 全球直连"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F3A5 Emby"
-  type: select
-  proxies:
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F3AF 全球直连"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F3BB Spotify"
-  type: select
-  proxies:
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F3AF 全球直连"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F4FA Bahamut"
-  type: select
-  proxies:
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F680 手动选择"
-  - "\U0001F3AF 全球直连"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F30E 国外媒体"
-  type: select
-  proxies:
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F6D2 国外电商"
-  type: select
-  proxies:
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F3AF 全球直连"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F4E2 谷歌FCM"
-  type: select
-  proxies:
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-- name: "\U0001F1EC 谷歌服务"
-  type: select
-  proxies:
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F34E 苹果服务"
-  type: select
-  proxies:
-  - "\U0001F3AF 全球直连"
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: Ⓜ️ 微软服务
-  type: select
-  proxies:
-  - "\U0001F3AF 全球直连"
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F3AE 游戏平台"
-  type: select
-  proxies:
-  - "\U0001F3AF 全球直连"
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F3AE Steam"
-  type: select
-  proxies:
-  - "\U0001F3AF 全球直连"
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F680 测速工具"
-  type: select
-  proxies:
-  - "\U0001F3AF 全球直连"
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F41F 漏网之鱼"
-  type: select
-  proxies:
-  - "\U0001F680 手动选择"
-  - "♻️ 自动选择"
-  - "\U0001F3AF 全球直连"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1FA\U0001F1F8 美国节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 新加坡节点"
-  - "\U0001F1FC\U0001F1F8 台湾节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F500 非标端口"
-  type: select
-  proxies:
-  - "\U0001F41F 漏网之鱼"
-  - "\U0001F3AF 全球直连"
-- name: "\U0001F1ED\U0001F1F0 香港节点"
-  type: url-test
-  url: https://cp.cloudflare.com/generate_204
-  interval: 300
-  tolerance: 50
-  proxies:
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀HK-香港M-[移优]-2x"
-  - "☀HK-香港M-[联优]-2x"
-  - "☀HK-香港S-[移优]-1x"
-  - "☀HK-香港S-[联优]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-- name: "\U0001F1FA\U0001F1F8 美国节点"
-  type: url-test
-  url: https://cp.cloudflare.com/generate_204
-  interval: 300
-  tolerance: 50
-  proxies:
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
-  - "☀US-美国LA-[小水管][即将下架]-5x"
-  - "☀US-美国LA-[小水管][固定ip]-5x"
-  - "☀US-美国LA-[顶级][三网优]-3x"
-  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
-  - "☀US-美国LA1-[CMI][三网优]-1x"
-  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
-  - "☀US-美国LA2-[CMI][三网优]-1x"
-  - "☀US-美国PHX-[常规]-1x"
-  - "☀US-美国PHX-[美西转]-1x"
-- name: "\U0001F1EF\U0001F1F5 日本节点"
-  type: url-test
-  url: https://cp.cloudflare.com/generate_204
-  interval: 300
-  tolerance: 50
-  proxies:
-  - "☀HK-香港-[日本转][移优]-1x"
-  - "☀JP-日本1-[流媒体][移优]-1x"
-  - "☀JP-日本1-[流媒体][美西转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[日本转][移优]-1x"
-  - "☀JP-日本2-[直连][移联优]-1x"
-  - "☀JP-日本2-[美西转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀JP-日本3-[直连][三网优]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-- name: "\U0001F1F8\U0001F1EC 新加坡节点"
-  type: url-test
-  url: https://cp.cloudflare.com/generate_204
-  interval: 300
-  tolerance: 50
-  proxies:
-  - "☀SG-新加坡-[移优]-1x"
-  - "☀SG-新加坡-[联优]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-- name: "\U0001F1FC\U0001F1F8 台湾节点"
-  type: url-test
-  url: https://cp.cloudflare.com/generate_204
-  interval: 300
-  tolerance: 50
-  proxies:
-  - "☀TW-台湾-[家宽][HY2]-1x"
-  - "☀TW-台湾-[家宽][日本转]-1x"
-  - "☀TW-台湾-[家宽][直连]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾-[家宽][香港转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-- name: "\U0001F1F0\U0001F1F7 韩国节点"
-  type: url-test
-  url: https://cp.cloudflare.com/generate_204
-  interval: 300
-  tolerance: 50
-  proxies:
-  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
-  - "☀HK-香港-[韩国转]-1x"
-  - "☀JP-日本1-[流媒体][韩国转]-1x"
-  - "☀JP-日本2-[韩国转]-1x"
-  - "☀SG-新加坡-[韩国转]-1x"
-  - "☀TW-台湾-[家宽][韩国转]-1x"
-  - "☀TW-台湾PRO-[韩国转]-1x"
-- name: "\U0001F3AF 全球直连"
-  type: select
-  proxies:
-  - DIRECT
-rules:
-- "IP-CIDR,149.154.0.0/16,\U0001F680 手动选择,no-resolve"
-- "IP-CIDR,91.108.0.0/16,\U0001F680 手动选择,no-resolve"
-- "DOMAIN-SUFFIX,reddit.com,\U0001F1EF\U0001F1F5 日本节点"
-- "DOMAIN-SUFFIX,wikipedia.org,\U0001F1EF\U0001F1F5 日本节点"
-- "DOMAIN-SUFFIX,zaobao.com.sg,\U0001F1EF\U0001F1F5 日本节点"
-- "DOMAIN-SUFFIX,telegram.org,\U0001F680 手动选择"
-- "DOMAIN-SUFFIX,t.me,\U0001F680 手动选择"
-- "GEOSITE,private,\U0001F3AF 全球直连"
-- "GEOIP,private,\U0001F3AF 全球直连,no-resolve"
-- "DST-PORT,7844,\U0001F3AF 全球直连"
-- "SRC-PORT,41641,\U0001F3AF 全球直连"
-- "IP-CIDR,108.174.48.100/32,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,198.41.192.0/24,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,198.41.200.0/24,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,218.78.7.16/32,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,47.246.103.0/24,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,47.246.177.0/24,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,47.246.180.0/24,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,47.246.99.0/24,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,5.5.5.5/32,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,98.126.27.164/32,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,207.241.224.2/32,\U0001F680 手动选择,no-resolve"
-- "GEOSITE,google-cn,\U0001F3AF 全球直连"
-- "GEOSITE,category-games@cn,\U0001F3AF 全球直连"
-- "IP-CIDR,103.10.124.0/23,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,103.28.54.0/24,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,146.66.152.0/24,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,146.66.155.0/24,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,153.254.86.0/24,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,155.133.224.0/22,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,155.133.230.0/24,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,155.133.232.0/23,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,155.133.234.0/24,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,155.133.236.0/22,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,155.133.240.0/23,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,155.133.244.0/23,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,155.133.246.0/24,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,155.133.248.0/21,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,162.254.192.0/21,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,185.25.182.0/23,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,190.217.32.0/22,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,192.69.96.0/22,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,205.185.194.0/24,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,205.196.6.0/24,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,208.64.200.0/22,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,208.78.164.0/22,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,45.121.184.0/24,\U0001F3AF 全球直连,no-resolve"
-- "GEOSITE,category-game-platforms-download,\U0001F3AF 全球直连"
-- "GEOSITE,category-public-tracker,\U0001F3AF 全球直连"
-- "GEOSITE,category-communication,\U0001F4AC 即时通讯"
-- "GEOSITE,category-social-media-!cn,\U0001F310 社交媒体"
-- "GEOSITE,openai,\U0001F916 ChatGPT"
-- "GEOSITE,category-ai-!cn,\U0001F916 AI服务"
-- "GEOSITE,github,\U0001F680 GitHub"
-- "GEOSITE,category-speedtest,\U0001F680 测速工具"
-- "GEOSITE,steam,\U0001F3AE Steam"
-- "GEOSITE,youtube,\U0001F4F9 YouTube"
-- "GEOSITE,apple-tvplus,\U0001F3A5 AppleTV+"
-- "GEOSITE,apple,\U0001F34E 苹果服务"
-- GEOSITE,microsoft,Ⓜ️ 微软服务
-- "GEOSITE,googlefcm,\U0001F4E2 谷歌FCM"
-- "GEOSITE,google,\U0001F1EC 谷歌服务"
-- "GEOSITE,tiktok,\U0001F3B6 TikTok"
-- "GEOSITE,netflix,\U0001F3A5 Netflix"
-- "GEOSITE,disney,\U0001F3A5 DisneyPlus"
-- "GEOSITE,hbo,\U0001F3A5 HBO"
-- "GEOSITE,primevideo,\U0001F3A5 PrimeVideo"
-- "GEOSITE,category-emby,\U0001F3A5 Emby"
-- "GEOSITE,spotify,\U0001F3BB Spotify"
-- "GEOSITE,bahamut,\U0001F4FA Bahamut"
-- "GEOSITE,category-games,\U0001F3AE 游戏平台"
-- "GEOSITE,category-entertainment,\U0001F30E 国外媒体"
-- "GEOSITE,category-ecommerce,\U0001F6D2 国外电商"
-- "GEOSITE,gfw,\U0001F680 手动选择"
-- "GEOIP,telegram,\U0001F4AC 即时通讯,no-resolve"
-- "GEOIP,twitter,\U0001F310 社交媒体,no-resolve"
-- "GEOIP,facebook,\U0001F310 社交媒体,no-resolve"
-- "GEOIP,google,\U0001F1EC 谷歌服务,no-resolve"
-- "GEOIP,netflix,\U0001F3A5 Netflix,no-resolve"
-- "GEOSITE,cn,\U0001F3AF 全球直连"
-- "GEOIP,cn,\U0001F3AF 全球直连,no-resolve"
-- "DST-PORT,1-79,\U0001F500 非标端口"
-- "DST-PORT,81-442,\U0001F500 非标端口"
-- "DST-PORT,444-65535,\U0001F500 非标端口"
-- "MATCH,\U0001F41F 漏网之鱼"
+find-process-mode: strict
+tcp-concurrent: true
+ipv6: false
+unified-delay: true
+geodata-mode: true
+profile:
+  store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
-  ipv6: false
+  use-system-hosts: false
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-  listen: 0.0.0.0:7874
-  respect-rules: true
-  fake-ip-filter-mode: blacklist
+  default-nameserver:
+  - 223.5.5.5
   nameserver:
   - https://doh.pub/dns-query
   - https://dns.alidns.com/dns-query
+  proxy-server-nameserver:
+  - https://1.12.12.12/dns-query
+  - https://223.5.5.5/dns-query
   fake-ip-filter:
   - "*.lan"
   - "*.localdomain"
@@ -1900,25 +140,560 @@ dns:
   - "+.pub.3gppnetwork.org"
   - geosite:category-games
   - baidu.com
+  - "*.msftconnecttest.com"
+  - "*.msftncsi.com"
+  - msftconnecttest.com
+  - msftncsi.com
   - rule-set:oc-cn-domain
-  default-nameserver:
-  - 223.5.5.5
-  proxy-server-nameserver:
-  - 223.5.5.5
+  ipv6: false
+  listen: 0.0.0.0:7874
+  respect-rules: true
+  fake-ip-filter-mode: blacklist
+proxies:
+- name: "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  type: vless
+  server: krsaa.doodoodood.store
+  port: 50030
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀HK-香港-[日本转][移优]-1x"
+  type: vless
+  server: jpyao.doodoodood.store
+  port: 12346
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀HK-香港-[韩国转]-1x"
+  type: vless
+  server: krsaa.doodoodood.store
+  port: 12346
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀HK-香港M-[移优]-2x"
+  type: vless
+  server: mbgp.doodoodood.store
+  port: 50443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀HK-香港M-[联优]-2x"
+  type: vless
+  server: cumpgp.doodoodood.store
+  port: 50443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀HK-香港S-[移优]-1x"
+  type: vless
+  server: pqsbgp.doodoodood.store
+  port: 60443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: tesla.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀HK-香港S-[联优]-1x"
+  type: vless
+  server: cu.doodoodood.store
+  port: 60443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: tesla.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀JP-日本1-[流媒体][移优]-1x"
+  type: vless
+  server: 141.11.130.44
+  port: 50005
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀JP-日本1-[流媒体][美西转]-1x"
+  type: vless
+  server: uszz.doodoodood.store
+  port: 50468
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀JP-日本1-[流媒体][韩国转]-1x"
+  type: vless
+  server: krsaa.doodoodood.store
+  port: 50005
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀JP-日本2-[日本转][移优]-1x"
+  type: vless
+  server: jpyao.doodoodood.store
+  port: 50023
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀JP-日本2-[直连][移联优]-1x"
+  type: vless
+  server: 191.223.221.21
+  port: 4443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀JP-日本2-[美西转]-1x"
+  type: vless
+  server: twzz2.doodoodood.store
+  port: 50462
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀JP-日本2-[韩国转]-1x"
+  type: vless
+  server: krsaa.doodoodood.store
+  port: 50023
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀JP-日本3-[直连][三网优]-1x"
+  type: vless
+  server: jpyao.doodoodood.store
+  port: 8443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.au.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀SG-新加坡-[移优]-1x"
+  type: vless
+  server: cmcc2.doodoodood.store
+  port: 50463
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀SG-新加坡-[联优]-1x"
+  type: vless
+  server: cu.doodoodood.store
+  port: 50463
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀SG-新加坡-[韩国转]-1x"
+  type: vless
+  server: krsaa.doodoodood.store
+  port: 50021
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀TW-台湾-[家宽][HY2]-1x"
+  type: hysteria2
+  server: twhy2.doodoodood.store
+  port: 443
+  password: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  up: 300 Mbps
+  down: 300 Mbps
+  obfs: salamander
+  obfs-password: ILoveDounai
+  sni: cu.aaaa.gay
+  alpn:
+  - h3
+- name: "☀TW-台湾-[家宽][日本转]-1x"
+  type: vless
+  server: jpyao.doodoodood.store
+  port: 10086
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀TW-台湾-[家宽][直连][NF]-1x"
+  type: vless
+  server: twb.doodoodood.store
+  port: 50099
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀TW-台湾-[家宽][韩国转]-1x"
+  type: vless
+  server: skb25.doodoodood.store
+  port: 10086
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀TW-台湾-[家宽][香港转]-1x"
+  type: vless
+  server: cmcc2.doodoodood.store
+  port: 50007
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀TW-台湾PRO-[韩国转]-1x"
+  type: vless
+  server: krsaa.doodoodood.store
+  port: 50003
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  type: vless
+  server: cmin2v6.doodoodood.store
+  port: 50028
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: tesla.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国LA-[小水管][即将下架]-5x"
+  type: vless
+  server: 38.58.57.6
+  port: 443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国LA-[小水管][固定ip]-5x"
+  type: vless
+  server: x5us.doodoodood.store
+  port: 60443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国LA-[顶级][三网优]-3x"
+  type: vless
+  server: mamius.doodoodood.store
+  port: 443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  type: vless
+  server: cmirandom.doodoodood.store
+  port: 50028
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: tesla.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国LA1-[CMI][三网优]-1x"
+  type: vless
+  server: perlax2.doodoodood.store
+  port: 8443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  type: vless
+  server: cmirandom2.doodoodood.store
+  port: 50028
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国LA2-[CMI][三网优]-1x"
+  type: vless
+  server: uscm.doodoodood.store
+  port: 50016
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国PHX-[常规]-1x"
+  type: vless
+  server: 107.172.98.243
+  port: 8085
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: tesla.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国PHX-[美西转]-1x"
+  type: vless
+  server: idcf2.doodoodood.store
+  port: 50003
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: tesla.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+proxy-groups:
+- name: 默认节点
+  proxies:
+  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  - "☀HK-香港-[日本转][移优]-1x"
+  - "☀HK-香港-[韩国转]-1x"
+  - "☀HK-香港M-[移优]-2x"
+  - "☀HK-香港M-[联优]-2x"
+  - "☀HK-香港S-[移优]-1x"
+  - "☀HK-香港S-[联优]-1x"
+  - "☀JP-日本1-[流媒体][移优]-1x"
+  - "☀JP-日本1-[流媒体][美西转]-1x"
+  - "☀JP-日本1-[流媒体][韩国转]-1x"
+  - "☀JP-日本2-[日本转][移优]-1x"
+  - "☀JP-日本2-[直连][移联优]-1x"
+  - "☀JP-日本2-[美西转]-1x"
+  - "☀JP-日本2-[韩国转]-1x"
+  - "☀JP-日本3-[直连][三网优]-1x"
+  - "☀SG-新加坡-[移优]-1x"
+  - "☀SG-新加坡-[联优]-1x"
+  - "☀SG-新加坡-[韩国转]-1x"
+  - "☀TW-台湾-[家宽][HY2]-1x"
+  - "☀TW-台湾-[家宽][日本转]-1x"
+  - "☀TW-台湾-[家宽][直连][NF]-1x"
+  - "☀TW-台湾-[家宽][韩国转]-1x"
+  - "☀TW-台湾-[家宽][香港转]-1x"
+  - "☀TW-台湾PRO-[韩国转]-1x"
+  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  - "☀US-美国LA-[小水管][即将下架]-5x"
+  - "☀US-美国LA-[小水管][固定ip]-5x"
+  - "☀US-美国LA-[顶级][三网优]-3x"
+  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  - "☀US-美国LA1-[CMI][三网优]-1x"
+  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  - "☀US-美国LA2-[CMI][三网优]-1x"
+  - "☀US-美国PHX-[常规]-1x"
+  - "☀US-美国PHX-[美西转]-1x"
+  type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/World_Map.png
+- name: 国内站点
+  type: select
+  proxies:
+  - DIRECT
+  - 默认节点
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China_Map.png
+- name: 漏网兜底
+  type: select
+  proxies:
+  - 默认节点
+  - DIRECT
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+rule-providers:
+  Domestic:
+    type: http
+    behavior: classical
+    url: https://sub.doodoodood.store/rules/Domestic.yaml
+    path: "./rule_provider/Domestic"
+    interval: 86400
+  DomesticIPs:
+    type: http
+    behavior: ipcidr
+    url: https://sub.doodoodood.store/rules/DomesticIPs.yaml
+    path: "./rule_provider/DomesticIPs"
+    interval: 86400
+  oc-cn-domain:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.mrs
+    path: "./rule_provider/oc-cn-domain.mrs"
+rules:
+- IP-CIDR,149.154.0.0/16,漏网兜底,no-resolve
+- IP-CIDR,91.108.0.0/16,漏网兜底,no-resolve
+- DOMAIN-SUFFIX,telegram.org,漏网兜底
+- DOMAIN-SUFFIX,t.me,漏网兜底
+- DOMAIN-SUFFIX,okex.com,漏网兜底
+- DOMAIN-SUFFIX,oklink.com,漏网兜底
+- DOMAIN-SUFFIX,okx.com,漏网兜底
+- DOMAIN-SUFFIX,mypikpak.com,漏网兜底
+- DOMAIN-SUFFIX,larksuite.com,国内站点
+- DOMAIN-SUFFIX,agentseller.temu.com,国内站点
+- IP-CIDR,127.0.0.0/8,DIRECT
+- IP-CIDR,169.254.0.0/16,DIRECT
+- IP-CIDR,10.0.0.0/8,DIRECT
+- IP-CIDR,172.16.0.0/12,DIRECT
+- IP-CIDR,192.168.0.0/16,DIRECT
+- IP-CIDR6,::1/128,DIRECT
+- IP-CIDR6,fc00::/7,DIRECT
+- IP-CIDR,224.0.0.0/4,DIRECT
+- RULE-SET,Domestic,国内站点
+- RULE-SET,DomesticIPs,国内站点
+- MATCH,漏网兜底
 redir-port: 7892
 tproxy-port: 7895
-mixed-port: 7893
+port: 7890
+socks-port: 7891
 secret: yBQDGuqG
-bind-address: "*"
 external-ui: "/usr/share/openclash/ui"
 external-ui-name: metacubexd
 external-ui-url: https://codeload.github.com/MetaCubeX/metacubexd/zip/refs/heads/gh-pages
 keep-alive-interval: 15
 keep-alive-idle: 600
-ipv6: false
-geodata-mode: true
-tcp-concurrent: true
-unified-delay: true
 geox-url:
   mmdb: https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/lite/Country.mmdb
   geoip: https://fastly.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat
@@ -1954,9 +729,6 @@ sniffer:
   - "+.push.apple.com"
   parse-pure-ip: true
   force-dns-mapping: true
-profile:
-  store-selected: true
-  store-fake-ip: true
 ntp:
   enable: true
   server: time.apple.com
@@ -1965,11 +737,3 @@ ntp:
   write-to-system: true
 authentication:
 - Clash:Mh4NyXyH
-rule-providers:
-  oc-cn-domain:
-    type: http
-    interval: 43200
-    behavior: domain
-    format: mrs
-    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.mrs
-    path: "./rule_provider/oc-cn-domain.mrs"
