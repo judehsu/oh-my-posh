@@ -1695,6 +1695,8 @@ rules:
 - "DOMAIN-SUFFIX,reddit.com,\U0001F1EF\U0001F1F5 日本节点"
 - "DOMAIN-SUFFIX,wikipedia.org,\U0001F1EF\U0001F1F5 日本节点"
 - "DOMAIN-SUFFIX,zaobao.com.sg,\U0001F1EF\U0001F1F5 日本节点"
+- "DOMAIN-SUFFIX,telegram.org,\U0001F680 手动选择"
+- "DOMAIN-SUFFIX,t.me,\U0001F680 手动选择"
 - "GEOSITE,private,\U0001F3AF 全球直连"
 - "GEOIP,private,\U0001F3AF 全球直连,no-resolve"
 - "DST-PORT,7844,\U0001F3AF 全球直连"
