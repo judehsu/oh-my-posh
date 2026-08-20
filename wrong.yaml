@@ -1,0 +1,1530 @@
+---
+mixed-port: 7893
+bind-address: "*"
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 0.0.0.0:9090
+find-process-mode: strict
+tcp-concurrent: true
+ipv6: false
+unified-delay: true
+geodata-mode: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  use-system-hosts: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 192.0.2.1/24
+  default-nameserver:
+  - 223.5.5.5
+  nameserver-policy: {}
+  nameserver:
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  proxy-server-nameserver:
+  - https://160.16.116.98:1443/dns-query
+  - https://38.65.92.167:1443/dns-query
+  - https://216.234.143.22:19826/dns-query
+  - https://191.40.3.26:1443/dns-query
+  - https://jp.raito.xns.one/BLjtR3kfpUM/dns-query
+  - https://hk.raito.xns.one/BLjtR3kfpUM/dns-query
+  - https://hk.kahkee.xns.one/BLjtR3kfpUM/dns-query
+  - https://jp.beta.xns.one/BLjtR3kfpUM/dns-query
+  fake-ip-filter:
+  - "*.lan"
+  - "*.localdomain"
+  - "*.example"
+  - "*.invalid"
+  - "*.localhost"
+  - "*.test"
+  - "*.local"
+  - "*.home.arpa"
+  - time.*.com
+  - time.*.gov
+  - time.*.edu.cn
+  - time.*.apple.com
+  - time-ios.apple.com
+  - time1.*.com
+  - time2.*.com
+  - time3.*.com
+  - time4.*.com
+  - time5.*.com
+  - time6.*.com
+  - time7.*.com
+  - ntp.*.com
+  - ntp1.*.com
+  - ntp2.*.com
+  - ntp3.*.com
+  - ntp4.*.com
+  - ntp5.*.com
+  - ntp6.*.com
+  - ntp7.*.com
+  - "*.time.edu.cn"
+  - "*.ntp.org.cn"
+  - "+.pool.ntp.org"
+  - time1.cloud.tencent.com
+  - music.163.com
+  - "*.music.163.com"
+  - "*.126.net"
+  - musicapi.taihe.com
+  - music.taihe.com
+  - songsearch.kugou.com
+  - trackercdn.kugou.com
+  - "*.kuwo.cn"
+  - api-jooxtt.sanook.com
+  - api.joox.com
+  - joox.com
+  - y.qq.com
+  - "*.y.qq.com"
+  - streamoc.music.tc.qq.com
+  - mobileoc.music.tc.qq.com
+  - isure.stream.qqmusic.qq.com
+  - dl.stream.qqmusic.qq.com
+  - aqqmusic.tc.qq.com
+  - amobile.music.tc.qq.com
+  - "*.xiami.com"
+  - "*.music.migu.cn"
+  - music.migu.cn
+  - "+.msftconnecttest.com"
+  - "+.msftncsi.com"
+  - localhost.ptlogin2.qq.com
+  - localhost.sec.qq.com
+  - "+.qq.com"
+  - "+.tencent.com"
+  - "+.srv.nintendo.net"
+  - "*.n.n.srv.nintendo.net"
+  - "+.cdn.nintendo.net"
+  - "+.stun.playstation.net"
+  - xbox.*.*.microsoft.com
+  - "*.*.xboxlive.com"
+  - xbox.*.microsoft.com
+  - xnotify.xboxlive.com
+  - "+.battlenet.com.cn"
+  - "+.wotgame.cn"
+  - "+.wggames.cn"
+  - "+.wowsgame.cn"
+  - "+.wargaming.net"
+  - proxy.golang.org
+  - stun.*.*
+  - stun.*.*.*
+  - "+.stun.*.*"
+  - "+.stun.*.*.*"
+  - "+.stun.*.*.*.*"
+  - "+.stun.*.*.*.*.*"
+  - heartbeat.belkin.com
+  - "*.linksys.com"
+  - "*.linksyssmartwifi.com"
+  - "*.router.asus.com"
+  - mesu.apple.com
+  - swscan.apple.com
+  - swquery.apple.com
+  - swdownload.apple.com
+  - swcdn.apple.com
+  - swdist.apple.com
+  - lens.l.google.com
+  - stun.l.google.com
+  - na.b.g-tun.com
+  - "+.nflxvideo.net"
+  - "*.square-enix.com"
+  - "*.finalfantasyxiv.com"
+  - "*.ffxiv.com"
+  - "*.ff14.sdo.com"
+  - ff.dorado.sdo.com
+  - "*.mcdn.bilivideo.cn"
+  - "+.media.dssott.com"
+  - shark007.net
+  - Mijia Cloud
+  - "+.cmbchina.com"
+  - "+.cmbimg.com"
+  - local.adguard.org
+  - "+.sandai.net"
+  - "+.n0808.com"
+  - "+.uu.163.com"
+  - ps.res.netease.com
+  - "+.pub.3gppnetwork.org"
+  - geosite:category-games
+  - baidu.com
+  - "*.msftconnecttest.com"
+  - "*.msftncsi.com"
+  - msftconnecttest.com
+  - msftncsi.com
+  - rule-set:oc-cn-domain
+  ipv6: false
+  listen: 0.0.0.0:7874
+  respect-rules: true
+  fake-ip-filter-mode: blacklist
+proxies:
+- name: "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  type: vless
+  server: krsaa.shanshan.uk
+  port: 50030
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀HK-香港-[日本转][移优]-1x"
+  type: vless
+  server: jpyao.shanshan.uk
+  port: 12346
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀HK-香港-[韩国转]-1x"
+  type: vless
+  server: krsaa.shanshan.uk
+  port: 12346
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀HK-香港M-[移优]-2x"
+  type: vless
+  server: mbgp.shanshan.uk
+  port: 50443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀HK-香港M-[联优]-2x"
+  type: vless
+  server: cumpgp.shanshan.uk
+  port: 50443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀HK-香港S-[移优]-1x"
+  type: vless
+  server: pqsbgp.shanshan.uk
+  port: 60443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: tesla.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀HK-香港S-[联优]-1x"
+  type: vless
+  server: cu.shanshan.uk
+  port: 60443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: tesla.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀JP-日本1-[流媒体][移优]-1x"
+  type: vless
+  server: 141.11.130.44
+  port: 50005
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀JP-日本1-[流媒体][美西转]-1x"
+  type: vless
+  server: uszz.shanshan.uk
+  port: 50468
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀JP-日本1-[流媒体][韩国转]-1x"
+  type: vless
+  server: krsaa.shanshan.uk
+  port: 50005
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀JP-日本2-[日本转][移优]-1x"
+  type: vless
+  server: jpyao.shanshan.uk
+  port: 50023
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀JP-日本2-[直连][移联优]-1x"
+  type: vless
+  server: 191.223.221.21
+  port: 4443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀JP-日本2-[美西转]-1x"
+  type: vless
+  server: twzz2.shanshan.uk
+  port: 50462
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀JP-日本2-[韩国转]-1x"
+  type: vless
+  server: krsaa.shanshan.uk
+  port: 50023
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀JP-日本3-[直连][三网优]-1x"
+  type: vless
+  server: jpyao.shanshan.uk
+  port: 8443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.au.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀SG-新加坡-[移优]-1x"
+  type: vless
+  server: cmcc2.shanshan.uk
+  port: 50463
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀SG-新加坡-[联优]-1x"
+  type: vless
+  server: cu.shanshan.uk
+  port: 50463
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀SG-新加坡-[韩国转]-1x"
+  type: vless
+  server: krsaa.shanshan.uk
+  port: 50021
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀TW-台湾-[家宽][HY2]-1x"
+  type: hysteria2
+  server: twhy2.shanshan.uk
+  port: 443
+  password: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  up: 300 Mbps
+  down: 300 Mbps
+  obfs: salamander
+  obfs-password: ILoveDounai
+  sni: cu.aaaa.gay
+  alpn:
+  - h3
+- name: "☀TW-台湾-[家宽][日本转]-1x"
+  type: vless
+  server: jpyao.shanshan.uk
+  port: 10086
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀TW-台湾-[家宽][直连]-1x"
+  type: vless
+  server: twb.shanshan.uk
+  port: 50099
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀TW-台湾-[家宽][韩国转]-1x"
+  type: vless
+  server: skb25.shanshan.uk
+  port: 10086
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀TW-台湾-[家宽][香港转]-1x"
+  type: vless
+  server: cmcc2.shanshan.uk
+  port: 50007
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀TW-台湾PRO-[韩国转]-1x"
+  type: vless
+  server: krsaa.shanshan.uk
+  port: 50003
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  type: vless
+  server: cmin2v6.shanshan.uk
+  port: 50028
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: tesla.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国LA-[小水管][即将下架]-5x"
+  type: vless
+  server: 38.58.57.6
+  port: 443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国LA-[小水管][固定ip]-5x"
+  type: vless
+  server: x5us.shanshan.uk
+  port: 60443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国LA-[顶级][三网优]-3x"
+  type: vless
+  server: mamius.shanshan.uk
+  port: 443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  type: vless
+  server: cmirandom.shanshan.uk
+  port: 50028
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: tesla.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国LA1-[CMI][三网优]-1x"
+  type: vless
+  server: perlax2.shanshan.uk
+  port: 8443
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  type: vless
+  server: cmirandom2.shanshan.uk
+  port: 50028
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国LA2-[CMI][三网优]-1x"
+  type: vless
+  server: uscm.shanshan.uk
+  port: 50016
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.amd.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国PHX-[常规]-1x"
+  type: vless
+  server: 107.172.98.243
+  port: 8085
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: tesla.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+- name: "☀US-美国PHX-[美西转]-1x"
+  type: vless
+  server: idcf2.shanshan.uk
+  port: 50003
+  uuid: ccf23eb1-6bfe-393e-9e0d-ca11f04f0c73
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: tesla.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+proxy-groups:
+- name: 默认节点
+  proxies:
+  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  - "☀HK-香港-[日本转][移优]-1x"
+  - "☀HK-香港-[韩国转]-1x"
+  - "☀HK-香港M-[移优]-2x"
+  - "☀HK-香港M-[联优]-2x"
+  - "☀HK-香港S-[移优]-1x"
+  - "☀HK-香港S-[联优]-1x"
+  - "☀JP-日本1-[流媒体][移优]-1x"
+  - "☀JP-日本1-[流媒体][美西转]-1x"
+  - "☀JP-日本1-[流媒体][韩国转]-1x"
+  - "☀JP-日本2-[日本转][移优]-1x"
+  - "☀JP-日本2-[直连][移联优]-1x"
+  - "☀JP-日本2-[美西转]-1x"
+  - "☀JP-日本2-[韩国转]-1x"
+  - "☀JP-日本3-[直连][三网优]-1x"
+  - "☀SG-新加坡-[移优]-1x"
+  - "☀SG-新加坡-[联优]-1x"
+  - "☀SG-新加坡-[韩国转]-1x"
+  - "☀TW-台湾-[家宽][HY2]-1x"
+  - "☀TW-台湾-[家宽][日本转]-1x"
+  - "☀TW-台湾-[家宽][直连]-1x"
+  - "☀TW-台湾-[家宽][韩国转]-1x"
+  - "☀TW-台湾-[家宽][香港转]-1x"
+  - "☀TW-台湾PRO-[韩国转]-1x"
+  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  - "☀US-美国LA-[小水管][即将下架]-5x"
+  - "☀US-美国LA-[小水管][固定ip]-5x"
+  - "☀US-美国LA-[顶级][三网优]-3x"
+  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  - "☀US-美国LA1-[CMI][三网优]-1x"
+  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  - "☀US-美国LA2-[CMI][三网优]-1x"
+  - "☀US-美国PHX-[常规]-1x"
+  - "☀US-美国PHX-[美西转]-1x"
+  type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/World_Map.png
+- name: Telegram
+  proxies:
+  - 默认节点
+  - DIRECT
+  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  - "☀HK-香港-[日本转][移优]-1x"
+  - "☀HK-香港-[韩国转]-1x"
+  - "☀HK-香港M-[移优]-2x"
+  - "☀HK-香港M-[联优]-2x"
+  - "☀HK-香港S-[移优]-1x"
+  - "☀HK-香港S-[联优]-1x"
+  - "☀JP-日本1-[流媒体][移优]-1x"
+  - "☀JP-日本1-[流媒体][美西转]-1x"
+  - "☀JP-日本1-[流媒体][韩国转]-1x"
+  - "☀JP-日本2-[日本转][移优]-1x"
+  - "☀JP-日本2-[直连][移联优]-1x"
+  - "☀JP-日本2-[美西转]-1x"
+  - "☀JP-日本2-[韩国转]-1x"
+  - "☀JP-日本3-[直连][三网优]-1x"
+  - "☀SG-新加坡-[移优]-1x"
+  - "☀SG-新加坡-[联优]-1x"
+  - "☀SG-新加坡-[韩国转]-1x"
+  - "☀TW-台湾-[家宽][HY2]-1x"
+  - "☀TW-台湾-[家宽][日本转]-1x"
+  - "☀TW-台湾-[家宽][直连]-1x"
+  - "☀TW-台湾-[家宽][韩国转]-1x"
+  - "☀TW-台湾-[家宽][香港转]-1x"
+  - "☀TW-台湾PRO-[韩国转]-1x"
+  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  - "☀US-美国LA-[小水管][即将下架]-5x"
+  - "☀US-美国LA-[小水管][固定ip]-5x"
+  - "☀US-美国LA-[顶级][三网优]-3x"
+  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  - "☀US-美国LA1-[CMI][三网优]-1x"
+  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  - "☀US-美国LA2-[CMI][三网优]-1x"
+  - "☀US-美国PHX-[常规]-1x"
+  - "☀US-美国PHX-[美西转]-1x"
+  type: select
+  icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png
+- name: ChatGPT
+  proxies:
+  - 默认节点
+  - DIRECT
+  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  - "☀HK-香港-[日本转][移优]-1x"
+  - "☀HK-香港-[韩国转]-1x"
+  - "☀HK-香港M-[移优]-2x"
+  - "☀HK-香港M-[联优]-2x"
+  - "☀HK-香港S-[移优]-1x"
+  - "☀HK-香港S-[联优]-1x"
+  - "☀JP-日本1-[流媒体][移优]-1x"
+  - "☀JP-日本1-[流媒体][美西转]-1x"
+  - "☀JP-日本1-[流媒体][韩国转]-1x"
+  - "☀JP-日本2-[日本转][移优]-1x"
+  - "☀JP-日本2-[直连][移联优]-1x"
+  - "☀JP-日本2-[美西转]-1x"
+  - "☀JP-日本2-[韩国转]-1x"
+  - "☀JP-日本3-[直连][三网优]-1x"
+  - "☀SG-新加坡-[移优]-1x"
+  - "☀SG-新加坡-[联优]-1x"
+  - "☀SG-新加坡-[韩国转]-1x"
+  - "☀TW-台湾-[家宽][HY2]-1x"
+  - "☀TW-台湾-[家宽][日本转]-1x"
+  - "☀TW-台湾-[家宽][直连]-1x"
+  - "☀TW-台湾-[家宽][韩国转]-1x"
+  - "☀TW-台湾-[家宽][香港转]-1x"
+  - "☀TW-台湾PRO-[韩国转]-1x"
+  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  - "☀US-美国LA-[小水管][即将下架]-5x"
+  - "☀US-美国LA-[小水管][固定ip]-5x"
+  - "☀US-美国LA-[顶级][三网优]-3x"
+  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  - "☀US-美国LA1-[CMI][三网优]-1x"
+  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  - "☀US-美国LA2-[CMI][三网优]-1x"
+  - "☀US-美国PHX-[常规]-1x"
+  - "☀US-美国PHX-[美西转]-1x"
+  type: select
+  icon: https://a.dounai.pro/images/chatgpt.png
+- name: Gemini&Google
+  proxies:
+  - 默认节点
+  - DIRECT
+  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  - "☀HK-香港-[日本转][移优]-1x"
+  - "☀HK-香港-[韩国转]-1x"
+  - "☀HK-香港M-[移优]-2x"
+  - "☀HK-香港M-[联优]-2x"
+  - "☀HK-香港S-[移优]-1x"
+  - "☀HK-香港S-[联优]-1x"
+  - "☀JP-日本1-[流媒体][移优]-1x"
+  - "☀JP-日本1-[流媒体][美西转]-1x"
+  - "☀JP-日本1-[流媒体][韩国转]-1x"
+  - "☀JP-日本2-[日本转][移优]-1x"
+  - "☀JP-日本2-[直连][移联优]-1x"
+  - "☀JP-日本2-[美西转]-1x"
+  - "☀JP-日本2-[韩国转]-1x"
+  - "☀JP-日本3-[直连][三网优]-1x"
+  - "☀SG-新加坡-[移优]-1x"
+  - "☀SG-新加坡-[联优]-1x"
+  - "☀SG-新加坡-[韩国转]-1x"
+  - "☀TW-台湾-[家宽][HY2]-1x"
+  - "☀TW-台湾-[家宽][日本转]-1x"
+  - "☀TW-台湾-[家宽][直连]-1x"
+  - "☀TW-台湾-[家宽][韩国转]-1x"
+  - "☀TW-台湾-[家宽][香港转]-1x"
+  - "☀TW-台湾PRO-[韩国转]-1x"
+  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  - "☀US-美国LA-[小水管][即将下架]-5x"
+  - "☀US-美国LA-[小水管][固定ip]-5x"
+  - "☀US-美国LA-[顶级][三网优]-3x"
+  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  - "☀US-美国LA1-[CMI][三网优]-1x"
+  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  - "☀US-美国LA2-[CMI][三网优]-1x"
+  - "☀US-美国PHX-[常规]-1x"
+  - "☀US-美国PHX-[美西转]-1x"
+  type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AI.png
+- name: Claude
+  proxies:
+  - 默认节点
+  - DIRECT
+  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  - "☀HK-香港-[日本转][移优]-1x"
+  - "☀HK-香港-[韩国转]-1x"
+  - "☀HK-香港M-[移优]-2x"
+  - "☀HK-香港M-[联优]-2x"
+  - "☀HK-香港S-[移优]-1x"
+  - "☀HK-香港S-[联优]-1x"
+  - "☀JP-日本1-[流媒体][移优]-1x"
+  - "☀JP-日本1-[流媒体][美西转]-1x"
+  - "☀JP-日本1-[流媒体][韩国转]-1x"
+  - "☀JP-日本2-[日本转][移优]-1x"
+  - "☀JP-日本2-[直连][移联优]-1x"
+  - "☀JP-日本2-[美西转]-1x"
+  - "☀JP-日本2-[韩国转]-1x"
+  - "☀JP-日本3-[直连][三网优]-1x"
+  - "☀SG-新加坡-[移优]-1x"
+  - "☀SG-新加坡-[联优]-1x"
+  - "☀SG-新加坡-[韩国转]-1x"
+  - "☀TW-台湾-[家宽][HY2]-1x"
+  - "☀TW-台湾-[家宽][日本转]-1x"
+  - "☀TW-台湾-[家宽][直连]-1x"
+  - "☀TW-台湾-[家宽][韩国转]-1x"
+  - "☀TW-台湾-[家宽][香港转]-1x"
+  - "☀TW-台湾PRO-[韩国转]-1x"
+  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  - "☀US-美国LA-[小水管][即将下架]-5x"
+  - "☀US-美国LA-[小水管][固定ip]-5x"
+  - "☀US-美国LA-[顶级][三网优]-3x"
+  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  - "☀US-美国LA1-[CMI][三网优]-1x"
+  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  - "☀US-美国LA2-[CMI][三网优]-1x"
+  - "☀US-美国PHX-[常规]-1x"
+  - "☀US-美国PHX-[美西转]-1x"
+  type: select
+  icon: https://a.dounai.pro/images/Claude.png
+- name: Github
+  proxies:
+  - 默认节点
+  - DIRECT
+  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  - "☀HK-香港-[日本转][移优]-1x"
+  - "☀HK-香港-[韩国转]-1x"
+  - "☀HK-香港M-[移优]-2x"
+  - "☀HK-香港M-[联优]-2x"
+  - "☀HK-香港S-[移优]-1x"
+  - "☀HK-香港S-[联优]-1x"
+  - "☀JP-日本1-[流媒体][移优]-1x"
+  - "☀JP-日本1-[流媒体][美西转]-1x"
+  - "☀JP-日本1-[流媒体][韩国转]-1x"
+  - "☀JP-日本2-[日本转][移优]-1x"
+  - "☀JP-日本2-[直连][移联优]-1x"
+  - "☀JP-日本2-[美西转]-1x"
+  - "☀JP-日本2-[韩国转]-1x"
+  - "☀JP-日本3-[直连][三网优]-1x"
+  - "☀SG-新加坡-[移优]-1x"
+  - "☀SG-新加坡-[联优]-1x"
+  - "☀SG-新加坡-[韩国转]-1x"
+  - "☀TW-台湾-[家宽][HY2]-1x"
+  - "☀TW-台湾-[家宽][日本转]-1x"
+  - "☀TW-台湾-[家宽][直连]-1x"
+  - "☀TW-台湾-[家宽][韩国转]-1x"
+  - "☀TW-台湾-[家宽][香港转]-1x"
+  - "☀TW-台湾PRO-[韩国转]-1x"
+  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  - "☀US-美国LA-[小水管][即将下架]-5x"
+  - "☀US-美国LA-[小水管][固定ip]-5x"
+  - "☀US-美国LA-[顶级][三网优]-3x"
+  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  - "☀US-美国LA1-[CMI][三网优]-1x"
+  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  - "☀US-美国LA2-[CMI][三网优]-1x"
+  - "☀US-美国PHX-[常规]-1x"
+  - "☀US-美国PHX-[美西转]-1x"
+  type: select
+  icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png
+- name: Linkedin
+  proxies:
+  - 默认节点
+  - DIRECT
+  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  - "☀HK-香港-[日本转][移优]-1x"
+  - "☀HK-香港-[韩国转]-1x"
+  - "☀HK-香港M-[移优]-2x"
+  - "☀HK-香港M-[联优]-2x"
+  - "☀HK-香港S-[移优]-1x"
+  - "☀HK-香港S-[联优]-1x"
+  - "☀JP-日本1-[流媒体][移优]-1x"
+  - "☀JP-日本1-[流媒体][美西转]-1x"
+  - "☀JP-日本1-[流媒体][韩国转]-1x"
+  - "☀JP-日本2-[日本转][移优]-1x"
+  - "☀JP-日本2-[直连][移联优]-1x"
+  - "☀JP-日本2-[美西转]-1x"
+  - "☀JP-日本2-[韩国转]-1x"
+  - "☀JP-日本3-[直连][三网优]-1x"
+  - "☀SG-新加坡-[移优]-1x"
+  - "☀SG-新加坡-[联优]-1x"
+  - "☀SG-新加坡-[韩国转]-1x"
+  - "☀TW-台湾-[家宽][HY2]-1x"
+  - "☀TW-台湾-[家宽][日本转]-1x"
+  - "☀TW-台湾-[家宽][直连]-1x"
+  - "☀TW-台湾-[家宽][韩国转]-1x"
+  - "☀TW-台湾-[家宽][香港转]-1x"
+  - "☀TW-台湾PRO-[韩国转]-1x"
+  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  - "☀US-美国LA-[小水管][即将下架]-5x"
+  - "☀US-美国LA-[小水管][固定ip]-5x"
+  - "☀US-美国LA-[顶级][三网优]-3x"
+  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  - "☀US-美国LA1-[CMI][三网优]-1x"
+  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  - "☀US-美国LA2-[CMI][三网优]-1x"
+  - "☀US-美国PHX-[常规]-1x"
+  - "☀US-美国PHX-[美西转]-1x"
+  type: select
+  icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Linkedin.png
+- name: Netflix
+  proxies:
+  - 默认节点
+  - DIRECT
+  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  - "☀HK-香港-[日本转][移优]-1x"
+  - "☀HK-香港-[韩国转]-1x"
+  - "☀HK-香港M-[移优]-2x"
+  - "☀HK-香港M-[联优]-2x"
+  - "☀HK-香港S-[移优]-1x"
+  - "☀HK-香港S-[联优]-1x"
+  - "☀JP-日本1-[流媒体][移优]-1x"
+  - "☀JP-日本1-[流媒体][美西转]-1x"
+  - "☀JP-日本1-[流媒体][韩国转]-1x"
+  - "☀JP-日本2-[日本转][移优]-1x"
+  - "☀JP-日本2-[直连][移联优]-1x"
+  - "☀JP-日本2-[美西转]-1x"
+  - "☀JP-日本2-[韩国转]-1x"
+  - "☀JP-日本3-[直连][三网优]-1x"
+  - "☀SG-新加坡-[移优]-1x"
+  - "☀SG-新加坡-[联优]-1x"
+  - "☀SG-新加坡-[韩国转]-1x"
+  - "☀TW-台湾-[家宽][HY2]-1x"
+  - "☀TW-台湾-[家宽][日本转]-1x"
+  - "☀TW-台湾-[家宽][直连]-1x"
+  - "☀TW-台湾-[家宽][韩国转]-1x"
+  - "☀TW-台湾-[家宽][香港转]-1x"
+  - "☀TW-台湾PRO-[韩国转]-1x"
+  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  - "☀US-美国LA-[小水管][即将下架]-5x"
+  - "☀US-美国LA-[小水管][固定ip]-5x"
+  - "☀US-美国LA-[顶级][三网优]-3x"
+  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  - "☀US-美国LA1-[CMI][三网优]-1x"
+  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  - "☀US-美国LA2-[CMI][三网优]-1x"
+  - "☀US-美国PHX-[常规]-1x"
+  - "☀US-美国PHX-[美西转]-1x"
+  type: select
+  icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png
+- name: Disney
+  proxies:
+  - 默认节点
+  - DIRECT
+  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  - "☀HK-香港-[日本转][移优]-1x"
+  - "☀HK-香港-[韩国转]-1x"
+  - "☀HK-香港M-[移优]-2x"
+  - "☀HK-香港M-[联优]-2x"
+  - "☀HK-香港S-[移优]-1x"
+  - "☀HK-香港S-[联优]-1x"
+  - "☀JP-日本1-[流媒体][移优]-1x"
+  - "☀JP-日本1-[流媒体][美西转]-1x"
+  - "☀JP-日本1-[流媒体][韩国转]-1x"
+  - "☀JP-日本2-[日本转][移优]-1x"
+  - "☀JP-日本2-[直连][移联优]-1x"
+  - "☀JP-日本2-[美西转]-1x"
+  - "☀JP-日本2-[韩国转]-1x"
+  - "☀JP-日本3-[直连][三网优]-1x"
+  - "☀SG-新加坡-[移优]-1x"
+  - "☀SG-新加坡-[联优]-1x"
+  - "☀SG-新加坡-[韩国转]-1x"
+  - "☀TW-台湾-[家宽][HY2]-1x"
+  - "☀TW-台湾-[家宽][日本转]-1x"
+  - "☀TW-台湾-[家宽][直连]-1x"
+  - "☀TW-台湾-[家宽][韩国转]-1x"
+  - "☀TW-台湾-[家宽][香港转]-1x"
+  - "☀TW-台湾PRO-[韩国转]-1x"
+  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  - "☀US-美国LA-[小水管][即将下架]-5x"
+  - "☀US-美国LA-[小水管][固定ip]-5x"
+  - "☀US-美国LA-[顶级][三网优]-3x"
+  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  - "☀US-美国LA1-[CMI][三网优]-1x"
+  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  - "☀US-美国LA2-[CMI][三网优]-1x"
+  - "☀US-美国PHX-[常规]-1x"
+  - "☀US-美国PHX-[美西转]-1x"
+  type: select
+  icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney.png
+- name: UHD媒体库
+  proxies:
+  - 默认节点
+  - DIRECT
+  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  - "☀HK-香港-[日本转][移优]-1x"
+  - "☀HK-香港-[韩国转]-1x"
+  - "☀HK-香港M-[移优]-2x"
+  - "☀HK-香港M-[联优]-2x"
+  - "☀HK-香港S-[移优]-1x"
+  - "☀HK-香港S-[联优]-1x"
+  - "☀JP-日本1-[流媒体][移优]-1x"
+  - "☀JP-日本1-[流媒体][美西转]-1x"
+  - "☀JP-日本1-[流媒体][韩国转]-1x"
+  - "☀JP-日本2-[日本转][移优]-1x"
+  - "☀JP-日本2-[直连][移联优]-1x"
+  - "☀JP-日本2-[美西转]-1x"
+  - "☀JP-日本2-[韩国转]-1x"
+  - "☀JP-日本3-[直连][三网优]-1x"
+  - "☀SG-新加坡-[移优]-1x"
+  - "☀SG-新加坡-[联优]-1x"
+  - "☀SG-新加坡-[韩国转]-1x"
+  - "☀TW-台湾-[家宽][HY2]-1x"
+  - "☀TW-台湾-[家宽][日本转]-1x"
+  - "☀TW-台湾-[家宽][直连]-1x"
+  - "☀TW-台湾-[家宽][韩国转]-1x"
+  - "☀TW-台湾-[家宽][香港转]-1x"
+  - "☀TW-台湾PRO-[韩国转]-1x"
+  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  - "☀US-美国LA-[小水管][即将下架]-5x"
+  - "☀US-美国LA-[小水管][固定ip]-5x"
+  - "☀US-美国LA-[顶级][三网优]-3x"
+  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  - "☀US-美国LA1-[CMI][三网优]-1x"
+  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  - "☀US-美国LA2-[CMI][三网优]-1x"
+  - "☀US-美国PHX-[常规]-1x"
+  - "☀US-美国PHX-[美西转]-1x"
+  type: select
+  icon: https://a.dounai.pro/images/uhd.png
+- name: Youtube
+  proxies:
+  - 默认节点
+  - DIRECT
+  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  - "☀HK-香港-[日本转][移优]-1x"
+  - "☀HK-香港-[韩国转]-1x"
+  - "☀HK-香港M-[移优]-2x"
+  - "☀HK-香港M-[联优]-2x"
+  - "☀HK-香港S-[移优]-1x"
+  - "☀HK-香港S-[联优]-1x"
+  - "☀JP-日本1-[流媒体][移优]-1x"
+  - "☀JP-日本1-[流媒体][美西转]-1x"
+  - "☀JP-日本1-[流媒体][韩国转]-1x"
+  - "☀JP-日本2-[日本转][移优]-1x"
+  - "☀JP-日本2-[直连][移联优]-1x"
+  - "☀JP-日本2-[美西转]-1x"
+  - "☀JP-日本2-[韩国转]-1x"
+  - "☀JP-日本3-[直连][三网优]-1x"
+  - "☀SG-新加坡-[移优]-1x"
+  - "☀SG-新加坡-[联优]-1x"
+  - "☀SG-新加坡-[韩国转]-1x"
+  - "☀TW-台湾-[家宽][HY2]-1x"
+  - "☀TW-台湾-[家宽][日本转]-1x"
+  - "☀TW-台湾-[家宽][直连]-1x"
+  - "☀TW-台湾-[家宽][韩国转]-1x"
+  - "☀TW-台湾-[家宽][香港转]-1x"
+  - "☀TW-台湾PRO-[韩国转]-1x"
+  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  - "☀US-美国LA-[小水管][即将下架]-5x"
+  - "☀US-美国LA-[小水管][固定ip]-5x"
+  - "☀US-美国LA-[顶级][三网优]-3x"
+  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  - "☀US-美国LA1-[CMI][三网优]-1x"
+  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  - "☀US-美国LA2-[CMI][三网优]-1x"
+  - "☀US-美国PHX-[常规]-1x"
+  - "☀US-美国PHX-[美西转]-1x"
+  type: select
+  icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png
+- name: TikTok
+  proxies:
+  - 默认节点
+  - DIRECT
+  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  - "☀HK-香港-[日本转][移优]-1x"
+  - "☀HK-香港-[韩国转]-1x"
+  - "☀HK-香港M-[移优]-2x"
+  - "☀HK-香港M-[联优]-2x"
+  - "☀HK-香港S-[移优]-1x"
+  - "☀HK-香港S-[联优]-1x"
+  - "☀JP-日本1-[流媒体][移优]-1x"
+  - "☀JP-日本1-[流媒体][美西转]-1x"
+  - "☀JP-日本1-[流媒体][韩国转]-1x"
+  - "☀JP-日本2-[日本转][移优]-1x"
+  - "☀JP-日本2-[直连][移联优]-1x"
+  - "☀JP-日本2-[美西转]-1x"
+  - "☀JP-日本2-[韩国转]-1x"
+  - "☀JP-日本3-[直连][三网优]-1x"
+  - "☀SG-新加坡-[移优]-1x"
+  - "☀SG-新加坡-[联优]-1x"
+  - "☀SG-新加坡-[韩国转]-1x"
+  - "☀TW-台湾-[家宽][HY2]-1x"
+  - "☀TW-台湾-[家宽][日本转]-1x"
+  - "☀TW-台湾-[家宽][直连]-1x"
+  - "☀TW-台湾-[家宽][韩国转]-1x"
+  - "☀TW-台湾-[家宽][香港转]-1x"
+  - "☀TW-台湾PRO-[韩国转]-1x"
+  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  - "☀US-美国LA-[小水管][即将下架]-5x"
+  - "☀US-美国LA-[小水管][固定ip]-5x"
+  - "☀US-美国LA-[顶级][三网优]-3x"
+  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  - "☀US-美国LA1-[CMI][三网优]-1x"
+  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  - "☀US-美国LA2-[CMI][三网优]-1x"
+  - "☀US-美国PHX-[常规]-1x"
+  - "☀US-美国PHX-[美西转]-1x"
+  type: select
+  icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png
+- name: Temu
+  proxies:
+  - 默认节点
+  - DIRECT
+  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  - "☀HK-香港-[日本转][移优]-1x"
+  - "☀HK-香港-[韩国转]-1x"
+  - "☀HK-香港M-[移优]-2x"
+  - "☀HK-香港M-[联优]-2x"
+  - "☀HK-香港S-[移优]-1x"
+  - "☀HK-香港S-[联优]-1x"
+  - "☀JP-日本1-[流媒体][移优]-1x"
+  - "☀JP-日本1-[流媒体][美西转]-1x"
+  - "☀JP-日本1-[流媒体][韩国转]-1x"
+  - "☀JP-日本2-[日本转][移优]-1x"
+  - "☀JP-日本2-[直连][移联优]-1x"
+  - "☀JP-日本2-[美西转]-1x"
+  - "☀JP-日本2-[韩国转]-1x"
+  - "☀JP-日本3-[直连][三网优]-1x"
+  - "☀SG-新加坡-[移优]-1x"
+  - "☀SG-新加坡-[联优]-1x"
+  - "☀SG-新加坡-[韩国转]-1x"
+  - "☀TW-台湾-[家宽][HY2]-1x"
+  - "☀TW-台湾-[家宽][日本转]-1x"
+  - "☀TW-台湾-[家宽][直连]-1x"
+  - "☀TW-台湾-[家宽][韩国转]-1x"
+  - "☀TW-台湾-[家宽][香港转]-1x"
+  - "☀TW-台湾PRO-[韩国转]-1x"
+  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  - "☀US-美国LA-[小水管][即将下架]-5x"
+  - "☀US-美国LA-[小水管][固定ip]-5x"
+  - "☀US-美国LA-[顶级][三网优]-3x"
+  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  - "☀US-美国LA1-[CMI][三网优]-1x"
+  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  - "☀US-美国LA2-[CMI][三网优]-1x"
+  - "☀US-美国PHX-[常规]-1x"
+  - "☀US-美国PHX-[美西转]-1x"
+  type: select
+  icon: https://bcl.886886.uk/images/Temu.png
+- name: Bilibili
+  proxies:
+  - DIRECT
+  - 默认节点
+  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  - "☀HK-香港-[日本转][移优]-1x"
+  - "☀HK-香港-[韩国转]-1x"
+  - "☀HK-香港M-[移优]-2x"
+  - "☀HK-香港M-[联优]-2x"
+  - "☀HK-香港S-[移优]-1x"
+  - "☀HK-香港S-[联优]-1x"
+  - "☀JP-日本1-[流媒体][移优]-1x"
+  - "☀JP-日本1-[流媒体][美西转]-1x"
+  - "☀JP-日本1-[流媒体][韩国转]-1x"
+  - "☀JP-日本2-[日本转][移优]-1x"
+  - "☀JP-日本2-[直连][移联优]-1x"
+  - "☀JP-日本2-[美西转]-1x"
+  - "☀JP-日本2-[韩国转]-1x"
+  - "☀JP-日本3-[直连][三网优]-1x"
+  - "☀SG-新加坡-[移优]-1x"
+  - "☀SG-新加坡-[联优]-1x"
+  - "☀SG-新加坡-[韩国转]-1x"
+  - "☀TW-台湾-[家宽][HY2]-1x"
+  - "☀TW-台湾-[家宽][日本转]-1x"
+  - "☀TW-台湾-[家宽][直连]-1x"
+  - "☀TW-台湾-[家宽][韩国转]-1x"
+  - "☀TW-台湾-[家宽][香港转]-1x"
+  - "☀TW-台湾PRO-[韩国转]-1x"
+  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  - "☀US-美国LA-[小水管][即将下架]-5x"
+  - "☀US-美国LA-[小水管][固定ip]-5x"
+  - "☀US-美国LA-[顶级][三网优]-3x"
+  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  - "☀US-美国LA1-[CMI][三网优]-1x"
+  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  - "☀US-美国LA2-[CMI][三网优]-1x"
+  - "☀US-美国PHX-[常规]-1x"
+  - "☀US-美国PHX-[美西转]-1x"
+  type: select
+  icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png
+- name: Spotify
+  proxies:
+  - 默认节点
+  - DIRECT
+  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  - "☀HK-香港-[日本转][移优]-1x"
+  - "☀HK-香港-[韩国转]-1x"
+  - "☀HK-香港M-[移优]-2x"
+  - "☀HK-香港M-[联优]-2x"
+  - "☀HK-香港S-[移优]-1x"
+  - "☀HK-香港S-[联优]-1x"
+  - "☀JP-日本1-[流媒体][移优]-1x"
+  - "☀JP-日本1-[流媒体][美西转]-1x"
+  - "☀JP-日本1-[流媒体][韩国转]-1x"
+  - "☀JP-日本2-[日本转][移优]-1x"
+  - "☀JP-日本2-[直连][移联优]-1x"
+  - "☀JP-日本2-[美西转]-1x"
+  - "☀JP-日本2-[韩国转]-1x"
+  - "☀JP-日本3-[直连][三网优]-1x"
+  - "☀SG-新加坡-[移优]-1x"
+  - "☀SG-新加坡-[联优]-1x"
+  - "☀SG-新加坡-[韩国转]-1x"
+  - "☀TW-台湾-[家宽][HY2]-1x"
+  - "☀TW-台湾-[家宽][日本转]-1x"
+  - "☀TW-台湾-[家宽][直连]-1x"
+  - "☀TW-台湾-[家宽][韩国转]-1x"
+  - "☀TW-台湾-[家宽][香港转]-1x"
+  - "☀TW-台湾PRO-[韩国转]-1x"
+  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  - "☀US-美国LA-[小水管][即将下架]-5x"
+  - "☀US-美国LA-[小水管][固定ip]-5x"
+  - "☀US-美国LA-[顶级][三网优]-3x"
+  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  - "☀US-美国LA1-[CMI][三网优]-1x"
+  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  - "☀US-美国LA2-[CMI][三网优]-1x"
+  - "☀US-美国PHX-[常规]-1x"
+  - "☀US-美国PHX-[美西转]-1x"
+  type: select
+  icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png
+- name: 其它影音站点
+  proxies:
+  - 默认节点
+  - DIRECT
+  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  - "☀HK-香港-[日本转][移优]-1x"
+  - "☀HK-香港-[韩国转]-1x"
+  - "☀HK-香港M-[移优]-2x"
+  - "☀HK-香港M-[联优]-2x"
+  - "☀HK-香港S-[移优]-1x"
+  - "☀HK-香港S-[联优]-1x"
+  - "☀JP-日本1-[流媒体][移优]-1x"
+  - "☀JP-日本1-[流媒体][美西转]-1x"
+  - "☀JP-日本1-[流媒体][韩国转]-1x"
+  - "☀JP-日本2-[日本转][移优]-1x"
+  - "☀JP-日本2-[直连][移联优]-1x"
+  - "☀JP-日本2-[美西转]-1x"
+  - "☀JP-日本2-[韩国转]-1x"
+  - "☀JP-日本3-[直连][三网优]-1x"
+  - "☀SG-新加坡-[移优]-1x"
+  - "☀SG-新加坡-[联优]-1x"
+  - "☀SG-新加坡-[韩国转]-1x"
+  - "☀TW-台湾-[家宽][HY2]-1x"
+  - "☀TW-台湾-[家宽][日本转]-1x"
+  - "☀TW-台湾-[家宽][直连]-1x"
+  - "☀TW-台湾-[家宽][韩国转]-1x"
+  - "☀TW-台湾-[家宽][香港转]-1x"
+  - "☀TW-台湾PRO-[韩国转]-1x"
+  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  - "☀US-美国LA-[小水管][即将下架]-5x"
+  - "☀US-美国LA-[小水管][固定ip]-5x"
+  - "☀US-美国LA-[顶级][三网优]-3x"
+  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  - "☀US-美国LA1-[CMI][三网优]-1x"
+  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  - "☀US-美国LA2-[CMI][三网优]-1x"
+  - "☀US-美国PHX-[常规]-1x"
+  - "☀US-美国PHX-[美西转]-1x"
+  type: select
+  icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png
+- name: Microsoft
+  proxies:
+  - 默认节点
+  - DIRECT
+  - "☀HK-香港-[HKT][韩国转][家宽]-1x"
+  - "☀HK-香港-[日本转][移优]-1x"
+  - "☀HK-香港-[韩国转]-1x"
+  - "☀HK-香港M-[移优]-2x"
+  - "☀HK-香港M-[联优]-2x"
+  - "☀HK-香港S-[移优]-1x"
+  - "☀HK-香港S-[联优]-1x"
+  - "☀JP-日本1-[流媒体][移优]-1x"
+  - "☀JP-日本1-[流媒体][美西转]-1x"
+  - "☀JP-日本1-[流媒体][韩国转]-1x"
+  - "☀JP-日本2-[日本转][移优]-1x"
+  - "☀JP-日本2-[直连][移联优]-1x"
+  - "☀JP-日本2-[美西转]-1x"
+  - "☀JP-日本2-[韩国转]-1x"
+  - "☀JP-日本3-[直连][三网优]-1x"
+  - "☀SG-新加坡-[移优]-1x"
+  - "☀SG-新加坡-[联优]-1x"
+  - "☀SG-新加坡-[韩国转]-1x"
+  - "☀TW-台湾-[家宽][HY2]-1x"
+  - "☀TW-台湾-[家宽][日本转]-1x"
+  - "☀TW-台湾-[家宽][直连]-1x"
+  - "☀TW-台湾-[家宽][韩国转]-1x"
+  - "☀TW-台湾-[家宽][香港转]-1x"
+  - "☀TW-台湾PRO-[韩国转]-1x"
+  - "☀US-美国LA-[CMIN2][IPV6]-1.5x"
+  - "☀US-美国LA-[小水管][即将下架]-5x"
+  - "☀US-美国LA-[小水管][固定ip]-5x"
+  - "☀US-美国LA-[顶级][三网优]-3x"
+  - "☀US-美国LA1-[CMIN2][三网优]-1.5x"
+  - "☀US-美国LA1-[CMI][三网优]-1x"
+  - "☀US-美国LA2-[CMIN2][固定IP]-1.5x"
+  - "☀US-美国LA2-[CMI][三网优]-1x"
+  - "☀US-美国PHX-[常规]-1x"
+  - "☀US-美国PHX-[美西转]-1x"
+  type: select
+  icon: https://a.dounai.pro/images/microsoft.png
+- name: 广告站点
+  type: select
+  proxies:
+  - 默认节点
+  - REJECT
+  - DIRECT
+  icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Advertising.png
+- name: 学术站点
+  type: select
+  proxies:
+  - DIRECT
+  - 默认节点
+  icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Scholar.png
+- name: 国内站点
+  type: select
+  proxies:
+  - DIRECT
+  - 默认节点
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China_Map.png
+- name: 漏网兜底
+  type: select
+  proxies:
+  - 默认节点
+  - DIRECT
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+rule-providers:
+  其它影音站点:
+    type: http
+    behavior: classical
+    path: "./rule_provider/Streaming.yaml"
+    url: https://bcl.886886.uk/rules/Streaming.yaml
+    interval: 86400
+  Netflix:
+    type: http
+    behavior: classical
+    path: "./rule_provider/Netflix.yaml"
+    url: https://bcl.886886.uk/rules/Netflix.yaml
+    interval: 86400
+  UHD:
+    type: http
+    behavior: classical
+    path: "./rule_provider/UHD.yaml"
+    url: https://bcl.886886.uk/rules/UHD.yaml
+    interval: 86400
+  Github:
+    type: http
+    behavior: classical
+    path: "./rule_provider/Github.yaml"
+    url: https://bcl.886886.uk/rules/Github.yaml
+    interval: 86400
+  Google:
+    type: http
+    behavior: classical
+    path: "./rule_provider/Google.yaml"
+    url: https://bcl.886886.uk/rules/Google.yaml
+    interval: 86400
+  Claude:
+    type: http
+    behavior: classical
+    path: "./rule_provider/Claude.yaml"
+    url: https://bcl.886886.uk/rules/Claude.yaml
+    interval: 86400
+  Linkedin:
+    type: http
+    behavior: classical
+    path: "./rule_provider/Linkedin.yaml"
+    url: https://bcl.886886.uk/rules/Linkedin.yaml
+    interval: 86400
+  Disney:
+    type: http
+    behavior: classical
+    path: "./rule_provider/Disney.yaml"
+    url: https://bcl.886886.uk/rules/Disney.yaml
+    interval: 86400
+  Youtube:
+    type: http
+    behavior: classical
+    url: https://bcl.886886.uk/rules/Youtube.yaml
+    path: "./rule_provider/Youtube"
+    interval: 86400
+  Bilibili:
+    type: http
+    behavior: classical
+    url: https://bcl.886886.uk/rules/Bilibili.yaml
+    path: "./rule_provider/Bilibili"
+    interval: 86400
+  TikTok:
+    type: http
+    behavior: classical
+    url: https://bcl.886886.uk/rules/TikTok.yaml
+    path: "./rule_provider/TikTok"
+    interval: 86400
+  Temu:
+    type: http
+    behavior: classical
+    url: https://bcl.886886.uk/rules/Temu.yaml
+    path: "./rule_provider/Temu"
+    interval: 86400
+  Spotify:
+    type: http
+    behavior: classical
+    url: https://bcl.886886.uk/rules/Spotify.yaml
+    path: "./rule_provider/Spotify"
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    path: "./rule_provider/Telegram.yaml"
+    url: https://bcl.886886.uk/rules/Telegram.yaml
+    interval: 86400
+  ChatGPT:
+    type: http
+    behavior: classical
+    path: "./rule_provider/ChatGPT.yaml"
+    url: https://bcl.886886.uk/rules/ChatGPT.yaml
+    interval: 86400
+  Gemini:
+    type: http
+    behavior: classical
+    path: "./rule_provider/Gemini.yaml"
+    url: https://bcl.886886.uk/rules/Gemini.yaml
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    path: "./rule_provider/Microsoft.yaml"
+    url: https://bcl.886886.uk/rules/Microsoft.yaml
+    interval: 86400
+  广告站点:
+    type: http
+    behavior: domain
+    format: yaml
+    url: https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.yaml
+    path: "./rule_provider/Reject"
+    interval: 86400
+  Scholar:
+    type: http
+    behavior: classical
+    url: https://bcl.886886.uk/rules/Scholar.yaml
+    path: "./rule_provider/Scholar"
+    interval: 86400
+  Domestic:
+    type: http
+    behavior: classical
+    url: https://bcl.886886.uk/rules/Domestic.yaml
+    path: "./rule_provider/Domestic"
+    interval: 86400
+  DomesticIPs:
+    type: http
+    behavior: ipcidr
+    url: https://bcl.886886.uk/rules/DomesticIPs.yaml
+    path: "./rule_provider/DomesticIPs"
+    interval: 86400
+  oc-cn-domain:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.mrs
+    path: "./rule_provider/oc-cn-domain.mrs"
+rules:
+- DOMAIN-SUFFIX,okex.com,漏网兜底
+- DOMAIN-SUFFIX,oklink.com,漏网兜底
+- DOMAIN-SUFFIX,okx.com,漏网兜底
+- DOMAIN-SUFFIX,mypikpak.com,漏网兜底
+- DOMAIN-SUFFIX,larksuite.com,国内站点
+- DOMAIN-SUFFIX,agentseller.temu.com,国内站点
+- IP-CIDR,127.0.0.0/8,DIRECT
+- IP-CIDR,169.254.0.0/16,DIRECT
+- IP-CIDR,10.0.0.0/8,DIRECT
+- IP-CIDR,172.16.0.0/12,DIRECT
+- IP-CIDR,192.168.0.0/16,DIRECT
+- IP-CIDR6,::1/128,DIRECT
+- IP-CIDR6,fc00::/7,DIRECT
+- IP-CIDR,224.0.0.0/4,DIRECT
+- RULE-SET,其它影音站点,其它影音站点
+- RULE-SET,Netflix,Netflix
+- RULE-SET,Disney,Disney
+- RULE-SET,Youtube,Youtube
+- RULE-SET,TikTok,TikTok
+- RULE-SET,UHD,UHD媒体库
+- RULE-SET,Temu,Temu
+- RULE-SET,Bilibili,Bilibili
+- RULE-SET,Github,Github
+- RULE-SET,Spotify,Spotify
+- RULE-SET,Linkedin,Linkedin
+- RULE-SET,Google,Gemini&Google
+- RULE-SET,Claude,Claude
+- RULE-SET,Telegram,Telegram
+- RULE-SET,Microsoft,Microsoft
+- RULE-SET,ChatGPT,ChatGPT
+- RULE-SET,广告站点,广告站点
+- RULE-SET,Scholar,学术站点
+- RULE-SET,Domestic,国内站点
+- RULE-SET,DomesticIPs,国内站点
+- MATCH,漏网兜底
+redir-port: 7892
+tproxy-port: 7895
+port: 7890
+socks-port: 7891
+secret: yBQDGuqG
+external-ui: "/usr/share/openclash/ui"
+external-ui-name: metacubexd
+external-ui-url: https://codeload.github.com/MetaCubeX/metacubexd/zip/refs/heads/gh-pages
+keep-alive-interval: 15
+keep-alive-idle: 600
+experimental:
+  quic-go-disable-gso: true
+geox-url:
+  mmdb: https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/lite/Country.mmdb
+  geoip: https://fastly.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat
+  geosite: https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat
+  asn: https://testingcf.jsdelivr.net/gh/xishang0128/geoip@release/GeoLite2-ASN.mmdb
+sniffer:
+  enable: true
+  override-destination: false
+  sniff:
+    QUIC:
+      ports:
+      - 443
+    TLS:
+      ports:
+      - 443
+      - 8443
+    HTTP:
+      ports:
+      - 80
+      - 8080-8880
+      override-destination: true
+  force-domain:
+  - "+.netflix.com"
+  - "+.nflxvideo.net"
+  - "+.amazonaws.com"
+  - "+.media.dssott.com"
+  skip-domain:
+  - "+.apple.com"
+  - Mijia Cloud
+  - dlg.io.mi.com
+  - "+.oray.com"
+  - "+.sunlogin.net"
+  - "+.push.apple.com"
+  parse-pure-ip: true
+  force-dns-mapping: true
+ntp:
+  enable: true
+  server: time.apple.com
+  port: 123
+  interval: 30
+  write-to-system: true
+authentication:
+- Clash:Mh4NyXyH
